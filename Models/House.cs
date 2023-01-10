@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace entityFramework.Models;
 
 public class House
@@ -9,6 +11,7 @@ public class House
     public string? ShieldUrl { get; set; }
     public Influence HouseInfluence { get; set; }
     public DateTime StartDate { get; set; }
+    [JsonIgnore]
     public virtual ICollection<Person> People {get; set;}
 }
 
